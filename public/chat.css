@@ -5,7 +5,8 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(90deg, rgba(158,123,190,1) 0%, rgba(185,153,222,0.028448879551820738) 47%, rgba(118,164,213,1) 100%);}
+    background: linear-gradient(108deg, rgba(158,123,190,1) 0%, rgba(185,153,222,0.028448879551820738) 47%, rgba(118,164,213,1) 100%);
+}
 
 .container {
     display: inline-block;
