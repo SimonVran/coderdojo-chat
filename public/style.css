@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.navBar {
+    background: rgb(138,43,226);
+    background: linear-gradient(135deg, rgba(138,43,226,1) 0%, rgba(117,0,255,1) 74%, rgba(6,99,199,1) 100%);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+
+.navBar .auth {
+    margin: auto 0px;
+}
+
+.navBar h1 {
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navBar a {
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navBar a:hover {
+    background-color: rgb(207, 206, 206);
+}
+
+.navBar a:active {
+    background-color: rgb(93, 27, 173);
+    color: white;
+}
