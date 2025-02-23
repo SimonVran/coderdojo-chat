@@ -30,19 +30,25 @@ function createMessage(user, message) {
 }
 
 async function chat() {
-    let message = document.querySelector("#chatbox").value
-    document.querySelector("#chatbox").value = ""
-    let response = await fetch("/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+  let message = document.querySelector("#chatbox").value
+  document.querySelector("#chatbox").value = ""
 
-      body: JSON.stringify({
-        message: message,
-        username: username
-      })
+  console.log(message.length)
+  if (message.length > 400) {
+    message = "Message exceeded text limit"
+  }
+
+  let response = await fetch("/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+
+    body: JSON.stringify({
+      message: message,
+      username: username
     })
+  })
 
     loadChat()
 }
