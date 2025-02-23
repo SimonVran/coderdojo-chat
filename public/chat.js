@@ -33,24 +33,25 @@ async function chat() {
   let message = document.querySelector("#chatbox").value
   document.querySelector("#chatbox").value = ""
 
-  console.log(message.length)
   if (message.length > 400) {
-    message = "Message exceeded text limit"
-  }
+    document.querySelector("#chatbox").value = "Message exceeds text limit"
+  } else {
 
-  let response = await fetch("/api/chat", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    let response = await fetch("/api/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
 
-    body: JSON.stringify({
-      message: message,
-      username: username
+      body: JSON.stringify({
+        message: message,
+        username: username
+      })
     })
-  })
 
     loadChat()
+  
+  }
 }
 
 async function loadChat() {

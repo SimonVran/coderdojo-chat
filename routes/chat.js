@@ -14,10 +14,13 @@ router.get("/", (req, res) => {
 
 router.post("/", async (req, res) => {
     console.log(req.body)
-    messages.push({
+
+    let info = {
         user: req.body.username,
         message: req.body.message
-    })
+    }
+
+    messages.push(info)
     res.status(200).send()
 })
 
