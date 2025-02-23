@@ -70,6 +70,9 @@ setInterval(loadChat, 1000)
 
 
 document.addEventListener("DOMContentLoaded", async () => {
+
+  document.getElementById("username").value = ""
+
   document.getElementById("loginButton").onclick = onClick
   document.getElementById("chatSubmit").onclick = chat
 
